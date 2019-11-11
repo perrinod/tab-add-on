@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <h1 id="contextMenuLabel"></h1>
+            <label for="closedTabsNumber" id="closedTabsNumberLabel"></label>
+            <input type="number" id="closedTabsNumber" min="1" style="width: 6em">
+            <br/>
+            <h2 id="clearListMenuLabel"></h2>
+            <input type="checkbox" id="clearPreviousTabsCheckBoxForDisable">
+            <label for="clearPreviousTabsCheckBoxForDisable" id="clearPreviousTabsCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="clearPreviousTabsCheckBoxForTab">
+            <label for="clearPreviousTabsCheckBoxForTab" id="clearPreviousTabsCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="clearPreviousTabsCheckBoxForPage">
+            <label for="clearPreviousTabsCheckBoxForPage" id="clearPreviousTabsCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="clearPreviousTabsCheckBoxForBrowser">
+            <label for="clearPreviousTabsCheckBoxForBrowser" id="clearPreviousTabsCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="printPageMenuLabel"></h2>
+            <input type="checkbox" id="printPageCheckBoxForDisable">
+            <label for="printPageCheckBoxForDisable" id="printPageCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPageCheckBoxForTab">
+            <label for="printPageCheckBoxForTab" id="printPageCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPageCheckBoxForPage">
+            <label for="printPageCheckBoxForPage" id="printPageCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPageCheckBoxForBrowser">
+            <label for="printPageCheckBoxForBrowser" id="printPageCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="printPreviewMenuLabel"></h2>
+            <input type="checkbox" id="printPreviewCheckBoxForDisable">
+            <label for="printPreviewCheckBoxForDisable" id="printPreviewCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPreviewCheckBoxForTab">
+            <label for="printPreviewCheckBoxForTab" id="printPreviewCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPreviewCheckBoxForPage">
+            <label for="printPreviewCheckBoxForPage" id="printPreviewCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="printPreviewCheckBoxForBrowser">
+            <label for="printPreviewCheckBoxForBrowser" id="printPreviewCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsUrlAscMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsUrlAscCheckBoxForDisable">
+            <label for="sortTabsUrlAscCheckBoxForDisable" id="sortTabsUrlAscCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlAscCheckBoxForTab">
+            <label for="sortTabsUrlAscCheckBoxForTab" id="sortTabsUrlAscCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlAscCheckBoxForPage">
+            <label for="sortTabsUrlAscCheckBoxForPage" id="sortTabsUrlAscCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlAscCheckBoxForBrowser">
+            <label for="sortTabsUrlAscCheckBoxForBrowser" id="sortTabsUrlAscCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsUrlDesMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsUrlDesCheckBoxForDisable">
+            <label for="sortTabsUrlDesCheckBoxForDisable" id="sortTabsUrlDesCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlDesCheckBoxForTab">
+            <label for="sortTabsUrlDesCheckBoxForTab" id="sortTabsUrlDesCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlDesCheckBoxForPage">
+            <label for="sortTabsUrlDesCheckBoxForPage" id="sortTabsUrlDesCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsUrlDesCheckBoxForBrowser">
+            <label for="sortTabsUrlDesCheckBoxForBrowser" id="sortTabsUrlDesCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsTitleAscMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsTitleAscCheckBoxForDisable">
+            <label for="sortTabsTitleAscCheckBoxForDisable" id="sortTabsTitleAscCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleAscCheckBoxForTab">
+            <label for="sortTabsTitleCheckBoxAscForTab" id="sortTabsTitleAscCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleAscCheckBoxForPage">
+            <label for="sortTabsTitleAscCheckBoxForPage" id="sortTabsTitleAscCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleAscCheckBoxForBrowser">
+            <label for="sortTabsTitleAscCheckBoxForBrowser" id="sortTabsTitleAscCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsTitleDesMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsTitleDesCheckBoxForDisable">
+            <label for="sortTabsTitleDesCheckBoxForDisable" id="sortTabsTitleDesCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleDesCheckBoxForTab">
+            <label for="sortTabsTitleDesCheckBoxForTab" id="sortTabsTitleDesCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleDesCheckBoxForPage">
+            <label for="sortTabsTitleDesCheckBoxForPage" id="sortTabsTitleDesCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsTitleDesCheckBoxForBrowser">
+            <label for="sortTabsTitleDesCheckBoxForBrowser" id="sortTabsTitleDesCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsAccessedAscMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsAccessedAscCheckBoxForDisable">
+            <label for="sortTabsAccessedAscCheckBoxForDisable" id="sortTabsAccessedAscCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedAscCheckBoxForTab">
+            <label for="sortTabsAccessedAscCheckBoxForTab" id="sortTabsAccessedAscCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedAscCheckBoxForPage">
+            <label for="sortTabsAccessedAscCheckBoxForPage" id="sortTabsAccessedAscCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedAscCheckBoxForBrowser">
+            <label for="sortTabsAccessedAscCheckBoxForBrowser" id="sortTabsAccessedAscCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="sortTabsAccessedDesMenuLabel"></h2>
+            <input type="checkbox" id="sortTabsAccessedDesCheckBoxForDisable">
+            <label for="sortTabsAccessedDesCheckBoxForDisable" id="sortTabsAccessedDesCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedDesCheckBoxForTab">
+            <label for="sortTabsAccessedDesCheckBoxForTab" id="sortTabsAccessedDesCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedDesCheckBoxForPage">
+            <label for="sortTabsAccessedDesCheckBoxForPage" id="sortTabsAccessedDesCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="sortTabsAccessedDesCheckBoxForBrowser">
+            <label for="sortTabsAccessedDesCheckBoxForBrowser" id="sortTabsAccessedDesCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="savePdfMenuLabel"></h2>
+            <input type="checkbox" id="savePdfCheckBoxForDisable">
+            <label for="savePdfCheckBoxForDisable" id="savePdfCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="savePdfCheckBoxForTab">
+            <label for="savePdfCheckBoxForTab" id="savePdfCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="savePdfCheckBoxForPage">
+            <label for="savePdfCheckBoxForPage" id="savePdfCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="savePdfCheckBoxForBrowser">
+            <label for="savePdfCheckBoxForBrowser" id="savePdfCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="closeDuplicateTabsMenuLabel"></h2>
+            <input type="checkbox" id="closeDuplicateTabsCheckBoxForDisable">
+            <label for="closeDuplicateTabsCheckBoxForDisable" id="closeDuplicateTabsCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeDuplicateTabsCheckBoxForTab">
+            <label for="closeDuplicateTabsCheckBoxForTab" id="closeDuplicateTabsCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeDuplicateTabsCheckBoxForPage">
+            <label for="closeDuplicateTabsCheckBoxForPage" id="closeDuplicateTabsCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeDuplicateTabsCheckBoxForBrowser">
+            <label for="closeDuplicateTabsCheckBoxForBrowser" id="closeDuplicateTabsCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="closeAllLeftMenuLabel"></h2>
+            <input type="checkbox" id="closePinnedTabsCheckBox">
+            <label for="closePinnedTabsCheckBox" id="closePinnedTabsCheckBoxLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllLeftCheckBoxForDisable">
+            <label for="closeAllLeftCheckBoxForDisable" id="closeAllLeftCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllLeftCheckBoxForTab">
+            <label for="closeAllLeftCheckBoxForTab" id="closeAllLeftCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllLeftCheckBoxForPage">
+            <label for="closeAllLeftCheckBoxForPage" id="closeAllLeftCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllLeftCheckBoxForBrowser">
+            <label for="closeAllLeftCheckBoxForBrowser" id="closeAllLeftCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="moveAllRightMenuLabel"></h2>
+            <input type="checkbox" id="moveAllRightCheckBoxForDisable">
+            <label for="moveAllRightCheckBoxForDisable" id="moveAllRightCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllRightCheckBoxForTab">
+            <label for="moeAllRightCheckBoxForTab" id="moveAllRightCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllRightCheckBoxForPage">
+            <label for="moveAllRightCheckBoxForPage" id="moveAllRightCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllRightCheckBoxForBrowser">
+            <label for="moveAllRightCheckBoxForBrowser" id="moveAllRightCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="moveAllLeftMenuLabel"></h2>
+            <input type="checkbox" id="moveAllLeftCheckBoxForDisable">
+            <label for="moveAllLeftCheckBoxForDisable" id="moveAllLeftCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllLeftCheckBoxForTab">
+            <label for="moveAllLeftCheckBoxForTab" id="moveAllLeftCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllLeftCheckBoxForPage">
+            <label for="moveAllLeftCheckBoxForPage" id="moveAllLeftCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="moveAllLeftCheckBoxForBrowser">
+            <label for="moveAllLeftCheckBoxForBrowser" id="moveAllLeftCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="discardAllMenuLabel"></h2>
+            <input type="checkbox" id="discardAllCheckBoxForDisable">
+            <label for="discardAllCheckBoxForDisable" id="discardAllCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllCheckBoxForTab">
+            <label for="discardAllCheckBoxForTab" id="discardAllCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllCheckBoxForPage">
+            <label for="discardAllCheckBoxForPage" id="discardAllCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllCheckBoxForBrowser">
+            <label for="discardAllCheckBoxForBrowser" id="discardAllCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="discardRightMenuLabel"></h2>
+            <input type="checkbox" id="discardAllRightCheckBoxForDisable">
+            <label for="discardAllRightCheckBoxForDisable" id="discardAllRightCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllRightCheckBoxForTab">
+            <label for="discardAllRightCheckBoxForTab" id="discardAllRightCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllRightCheckBoxForPage">
+            <label for="discardAllRightCheckBoxForPage" id="discardAllRightCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllRightCheckBoxForBrowser">
+            <label for="discardAllRightCheckBoxForBrowser" id="discardAllRightCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="discardLeftMenuLabel"></h2>
+            <input type="checkbox" id="discardAllLeftCheckBoxForDisable">
+            <label for="discardAllLeftCheckBoxForDisable" id="discardAllLeftCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllLeftCheckBoxForTab">
+            <label for="discardAllLeftCheckBoxForTab" id="discardAllLeftCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllLeftCheckBoxForPage">
+            <label for="discardAllLeftCheckBoxForPage" id="discardAllLeftCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="discardAllLeftCheckBoxForBrowser">
+            <label for="discardAllLeftCheckBoxForBrowser" id="discardAllLeftCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="discardTabMenuLabel"></h2>
+            <input type="checkbox" id="discardTabCheckBoxForTab">
+            <label for="discardTabCheckBoxForTab" id="discardTabCheckBoxForTabLabel"></label>
+            <br/>
+            <h2 id="combineAllMenuLabel"></h2>
+            <input type="checkbox" id="combineAllCheckBoxForDisable">
+            <label for="combineAllCheckBoxForDisable" id="combineAllCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllCheckBoxForTab">
+            <label for="combineAllCheckBoxForTab" id="combineAllCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllCheckBoxForPage">
+            <label for="combineAllCheckBoxForPage" id="combineAllCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllCheckBoxForBrowser">
+            <label for="combineAllCheckBoxForBrowser" id="combineAllCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="combineRightMenuLabel"></h2>
+            <input type="checkbox" id="combineAllRightCheckBoxForDisable">
+            <label type="combineAllRightCheckBoxForDisable" id="combineAllRightCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllRightCheckBoxForTab">
+            <label for="combineAllRightCheckBoxForTab" id="combineAllRightCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllRightCheckBoxForPage">
+            <label for="combineAllRightCheckBoxForPage" id="combineAllRightCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllRightCheckBoxForBrowser">
+            <label for="combineAllRightCheckBoxForBrowser" id="combineAllRightCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="combineLeftMenuLabel"></h2>
+            <input type="checkbox" id="combineAllLeftCheckBoxForDisable">
+            <label for="combineAllLeftCheckBoxForDisable" id="combineAllLeftCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllLeftCheckBoxForTab">
+            <label for="combineAllLeftCheckBoxForTab" id="combineAllLeftCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllLeftCheckBoxForPage">
+            <label for="combineAllLeftCheckBoxForPage" id="combineAllLeftCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="combineAllLeftCheckBoxForBrowser">
+            <label for="combineAllLeftCheckBoxforBrowser" id="combineAllLeftCheckBoxForBrowserLabel"></label>
+            <br/>
+            <script src="storage.js"></script>
+            <script src="options.js"></script>
+        </form>
+    </body>
+</html>

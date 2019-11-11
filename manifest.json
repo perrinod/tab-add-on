@@ -1,0 +1,33 @@
+{
+    "default_locale": "en",
+
+    "description": "Extension for Tabs",
+
+    "background":{
+        "scripts": ["background.js", "storage.js"]
+    },
+
+    "browser_action":{
+        "browser_style": true
+    },
+
+    "manifest_version": 2,
+
+    "name": "Tab Extension",
+
+    "options_ui":{
+        "browser_style": true,
+        "open_in_tab": false,
+        "page": "options.html"
+    },
+
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "sessions",
+        "storage",
+        "theme"
+    ],
+
+    "version": "1.0"
+}

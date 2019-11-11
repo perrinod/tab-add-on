@@ -1,0 +1,594 @@
+{
+    "moveMenuLabel":{
+        "message": "Move",
+        "description": "Label for submenu"
+    },
+
+    "closePinnedTabsCheckBoxLabel":{
+        "message":  "Close Pinned Tabs",
+        "description": "Label for checkbox"
+    },
+
+    "moveAllRightMenuLabel":{
+        "message": "Move Tabs to the Right to New Window",
+        "description": "Label for submenu"
+    },
+
+    "moveAllRightCheckBoxForDisableLabel":{
+        "message": "Do not show move tabs to the right to new window for any context menu",
+        "description": "Label for checkbox to move tabs to new window"
+    },
+
+    "moveAllRightCheckBoxForTabLabel":{
+        "message": "Show move tabs to the the right to new window for tab context menu",
+        "description": "Label for checkbox to move tabs to new window"
+    },
+
+    "moveAllRightCheckBoxForPageLabel":{
+        "message": "Show move tabs to the right to new window for page context menu",
+        "description": "Label for checkbox to move tabs to new window"
+    },
+
+    "moveAllRightCheckBoxForBrowserLabel":{
+        "message": "Show move tabs to the right to new window for browser toolbar context menu",
+        "description": "Label for checkbox to move tabs to new window"
+    },
+
+    "moveAllLeftMenuLabel":{
+        "message": "Move Tabs to the Left to New Window",
+        "description": "Label for submenu"
+    },
+
+    "moveAllLeftCheckBoxForDisableLabel":{
+        "message": "Do not show move tabs to the left to new window for any context menu",
+        "description": "Label for submenu"
+    },
+
+    "moveAllLeftCheckBoxForTabLabel":{
+        "message": "Show move tabs to the left to new window for tab context menu",
+        "description": "Label for submenu"
+    },
+
+    "moveAllLeftCheckBoxForPageLabel":{
+        "message": "Show move tabs to the left to new window for page context menu",
+        "description": "Label for submenu"
+    },
+
+    "moveAllLeftCheckBoxForBrowserLabel":{
+        "message": "Show move tabs to the left to new window for browser toolbar context menu",
+        "description": "Label for submenu"
+    },
+    
+    "restoreAllTabsLabel":{
+        "message": "Restore All Tabs",
+        "description": "Label for submenu"
+    },
+
+    "restoreAllTabsWindowLabel":{
+        "message": "Restore All Tabs in New Window",
+        "description": "Label for submenu"
+    },
+
+    "printMenuLabel":{
+        "message": "Print",
+        "description": "Label for submenu"
+    },
+
+    "printPageMenuLabel":{
+        "message": "Print Page",
+        "description": "Label for submenu"
+    },
+
+    "printPageCheckBoxForDisableLabel":{
+        "message": "Do not show print page for any context menu",
+        "description": "Label for checkbox to print page"
+    },
+
+    "printPageCheckBoxForTabLabel":{
+        "message": "Show print page for tab context menu",
+        "description": "Label for checkbox to print page"
+    },
+
+    "printPageCheckBoxForPageLabel":{
+        "message": "Show print page for page context menu",
+        "description": "Label for checkbox to print page"
+    },
+
+    "printPageCheckBoxForBrowserLabel":{
+        "message": "Show print page for browser context menu",
+        "description": "Label for checkbox to print page"
+    },
+
+    "printPreviewMenuLabel":{
+        "message": "Print Preview",
+        "description": "Label for submenu"
+    },
+
+    "printPreviewCheckBoxForDisableLabel":{
+        "message": "Do not show print preview for any context menu",
+        "description": "Label for checkbox to print preview"
+    },
+
+    "printPreviewCheckBoxForTabLabel":{
+        "message": "Show print preview for tab context menu",
+        "description": "Label for checkbox to print preview"
+    },
+
+    "printPreviewCheckBoxForPageLabel":{
+        "message": "Show print preview for page context menu",
+        "description": "Label for checkbox to print preview"
+    },
+
+    "printPreviewCheckBoxForBrowserLabel":{
+        "message": "Show print preview for browser toolbar context menu",
+        "description": "Label for checkbox to print preview"
+    },
+
+    "sortTabsUrlAscMenuLabel":{
+        "message": "Sort Tabs by URL (ascending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsUrlDesMenuLabel":{
+        "message": "Sort Tabs by URL (descending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsTitleAscMenuLabel":{
+        "message": "Sort Tabs by Title (ascending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsTitleDesMenuLabel":{
+        "message": "Sort Tabs by title (descending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsAccessedAscMenuLabel":{
+        "message": "Sort Tabs by Last Accessed (ascending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsAccessedDesMenuLabel":{
+        "message": "Sort Tabs by Last Accessed (descending)",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsMenuLabel":{
+        "message": "Sort Tabs",
+        "description": "Label for submenu"
+    },
+
+    "sortTabsUrlAscCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by url (ascending) in any context menu",
+        "description": "label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlDesCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by url (descending) in any context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlAscCheckBoxForTabLabel":{
+        "message": "Show sort tabs by url (ascending) in tab context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlDesCheckBoxForTabLabel":{
+        "message": "Show sort tabs by url (descending) in tab context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlAscCheckBoxForPageLabel":{
+        "message": "Show sort tabs by url (ascending) in page context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlDesCheckBoxForPageLabel":{
+        "message": "Show sort tabs by url (descending) in page context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlAscCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by url (ascending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsUrlDesCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by url (descending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by url"
+    },
+
+    "sortTabsTitleAscCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by title (ascending) in any context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleDesCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by title (descending) in any context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleAscCheckBoxForTabLabel":{
+        "message": "Show sort tabs by title (ascending) in tab context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleDesCheckBoxForTabLabel":{
+        "message": "Show sort tabs by title (descending) in tab context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleAscCheckBoxForPageLabel":{
+        "message": "Show sort tabs by title (ascending) in page context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleDesCheckBoxForPageLabel":{
+        "message": "Show sort tabs by title (descending) in page context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleAscCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by title (ascending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsTitleDesCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by title (descending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by title"
+    },
+
+    "sortTabsAccessedAscCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by last accessed (ascending) in any context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedDesCheckBoxForDisableLabel":{
+        "message": "Do not show sort tabs by last accessed (descending) in any context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedAscCheckBoxForTabLabel":{
+        "message": "Show sort tabs by last accessed (ascending) in tab context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedDesCheckBoxForTabLabel":{
+        "message": "Show sort tabs by last accessed (descending) in tab context menu",
+        "description": "Label for checkbox to show tabs by last accessed"
+    },
+
+    "sortTabsAccessedAscCheckBoxForPageLabel":{
+        "message": "Show sort tabs by last accessed (ascending) in page context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedDesCheckBoxForPageLabel":{
+        "message": "Show sort tabs by last accessed (descending) in page context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedAscCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by last accessed (ascending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "sortTabsAccessedDesCheckBoxForBrowserLabel":{
+        "message": "Show sort tabs by last accessed (descending) in browser toolbar context menu",
+        "description": "Label for checkbox to sort tabs by last accessed"
+    },
+
+    "savePdfMenuLabel":{
+        "message": "Save as PDF",
+        "description": "Label for submenu"
+    },
+
+    "savePdfCheckBoxForDisableLabel":{
+        "message": "Do not show save as PDF for any context menu",
+        "description": "Label for checkbox to save as pdf"
+    },
+
+    "savePdfCheckBoxForBrowserLabel":{
+        "message": "Show save as PDF for browser toolbar context menu",
+        "description": "Label for checkbox to save as pdf"
+    },
+
+    "savePdfCheckBoxForTabLabel":{
+        "message": "Show save as PDF for tab context menu",
+        "description": "Label for checkbox to save as pdf"
+    },
+
+    "savePdfCheckBoxForPageLabel":{
+        "message": "Show save as PDF for page context menu",
+        "description": "Label for checkbox to save as pdf"
+    },
+
+    "closeMenuLabel":{
+        "message": "Close",
+        "description": "Label for submenu"
+    },
+    
+    "closeDuplicateTabsMenuLabel":{
+        "message": "Close Duplicate Tabs",
+        "description": "Label for submenu to close duplicate tabs"
+    },
+
+    "closeDuplicateTabsCheckBoxForDisableLabel":{
+        "message": "Do not show close duplicate tabs for any context menu",
+        "description": "Label on checkbox for close duplicate tabs"
+    },
+    
+    "closeDuplicateTabsCheckBoxForBrowserLabel":{
+        "message": "Show close duplicate tabs for browser toolbar context menu",
+        "description": "Label on checkbox for close duplicate tabs"
+    },
+
+    "closeDuplicateTabsCheckBoxForTabLabel":{
+        "message": "Show close duplicate tabs for tab context menu",
+        "description": "Label on checkbox for close duplicate tabs"
+    },
+
+    "closeDuplicateTabsCheckBoxForPageLabel":{
+        "message": "Show close duplicate tabs for page context menu",
+        "description": "Label on checkbox for close duplicate tabs"
+    },
+
+    "clearPreviousTabsCheckBoxForBrowserLabel":{
+        "message": "Show clear previous tabs for browser toolbar context menu",
+        "description": "Label on checkbox for clearing all previous tabs"
+    },
+
+    "clearPreviousTabsCheckBoxForTabLabel":{
+        "message": "Show clear previous tabs for tab context menu",
+        "description": "Label on checkbox for clearing all previous tabs"
+    },
+
+    "clearPreviousTabsCheckBoxForPageLabel":{
+        "message": "Show clear previous tabs for page context menu",
+        "description": "Label on checkbox for clearing all previous tabs"
+    },
+
+    "closeAllLeftMenuLabel":{
+        "message": "Close Tabs to the Left",
+        "description": "Label for submenu to close tabs to the left"
+    },
+
+    "closeAllLeftCheckBoxForDisableLabel":{
+        "message": "Do not show close tabs to the left for any context menu",
+        "description": "Label for checkbox to close tabs to the left"
+    },
+
+    "closeAllLeftCheckBoxForPageLabel":{
+        "message": "Show close tabs to the left for page context menu",
+        "description": "Label for checkbox to close tabs to the left"
+    },
+
+    "closeAllLeftCheckBoxForBrowserLabel":{
+        "message": "Show close all tabs to the left for browsre context menu",
+        "description": "Label for checkbox to close tabs to the left"
+    },
+
+    "closeAllLeftCheckBoxForTabLabel":{
+        "message": "Show close tabs to the left for tab context menu",
+        "description": "Label for checkbox to close tabs to the left"
+    },
+
+    "clearListMenuLabel":{
+        "message": "Clear Previous Tabs",
+        "description": "Label for submenu to clear previous tab list"
+    },
+
+    "combineAllCheckBoxForTabLabel":{
+        "message": "Show combine all tabs for tab context menu",
+        "description": "Label on checkbox for combine all"
+    },
+
+    "combineAllCheckBoxForPageLabel":{
+        "message": "Show combine all tabs for page context menu",
+        "description": "Label for checkbox for combine all"
+    },
+
+    "combineAllCheckBoxForBrowserLabel":{
+        "message": "Show combine all tabs for browser toolbar context menu",
+        "description": "Label for checkbox for combine all"
+    },
+
+    "combineAllRightCheckBoxForTabLabel":{
+        "message": "Show combine tabs to the right for tab context menu",
+        "description": "Label for checkbox for combine all right"
+    },
+
+    "combineAllRightCheckBoxForPageLabel":{
+        "message": "Show combine tabs to the right for page context menu",
+        "description": "Label for checkbox for combine all right"
+    },
+
+    "combineAllRightCheckBoxForBrowserLabel":{
+        "message": "Show combine tabs to the right for browser context menu",
+        "description": "Label for checkbox for combine all right"
+    },
+
+    "combineAllLeftCheckBoxForTabLabel":{
+        "message": "Show combine tabs to the left for tab context menu",
+        "description": "Label for checkbox for combine all left"
+    },
+
+    "combineAllLeftCheckBoxForPageLabel":{
+        "message": "Show combine tabs to the left for page context menu",
+        "description": "Label for checkbox for combine all left"
+    },
+
+    "combineAllLeftCheckBoxForBrowserLabel":{
+        "message": "Show combine tabs to the left for browser context menu",
+        "description": "Label for checkbox for combine all left"
+    },
+    
+    "combineAllMenuLabel":{
+        "message": "Combine All Tabs",
+        "description": "Label for submenu to combine all tabs"
+    },
+
+    "combineRightMenuLabel":{
+        "message": "Combine Tabs to the Right",
+        "description": "Label for submenu to combine all tabs to the right"
+    },
+
+    "combineLeftMenuLabel":{
+        "message": "Combine Tabs to the Left",
+        "description": "Label for submenu to combine all tabs to the left"
+    },
+
+    "combineMenuLabel":{
+        "message": "Combine Tabs",
+        "description": "Label for submenu to combine tabs"
+
+    },
+
+    "contextMenuLabel":{
+        "message": "Context Menu",
+        "description": "Options menu title"
+    },
+
+    "discardMenu":{
+        "message": "Discard",
+        "description": "Label for submenu to discard tabs"
+    },
+
+    "discardAllLeftCheckBoxForTabLabel":{
+        "message": "Show discard tabs to the left for tab context menu",
+        "description": "Label on checkbox to discard all left"
+    },
+
+    "discardAllRightCheckBoxForTabLabel":{
+        "message": "Show discard tabs to the right for tab context menu",
+        "description": "Label on checkbox to discard all right"
+    },
+
+    "discardAllLeftCheckBoxForPageLabel":{
+        "message": "Show discard tabs to the left for page context menu",
+        "description": "Label on checkbox to discard all left"
+    },
+
+    "discardAllRightCheckBoxForPageLabel":{
+        "message": "Show discard tabs to the right for page context menu",
+        "description": "Label for checkbox to discard all right"
+    },
+
+    "discardAllLeftCheckBoxForBrowserLabel":{
+        "message": "Show discard tabs to the left for browser toolbar context menu",
+        "description": "Label for checkbox to discard all left"
+    },
+
+    "discardAllRightCheckBoxForBrowserLabel":{
+        "message": "Show discard tabs to the right for browser toolbar context menu",
+        "description": "Label for checkbox to discard all right"
+    },
+
+    "discardAllCheckBoxForDisableLabel":{
+        "message": "Do not show discard all other tabs for any context menu",
+        "description": "Label on checkbox to discard all"
+    },
+
+    "discardAllRightCheckBoxForDisableLabel":{
+        "message": "Do not show discard tabs to the right for any context menu",
+        "description": "Label on checkbox for discard all right"
+    },
+
+    "discardAllLeftCheckBoxForDisableLabel":{
+        "message": "Do not show discard tabs to the left for any context menu",
+        "description": "Label on checkbox for discard all left"
+    },
+
+    "combineAllCheckBoxForDisableLabel":{
+        "message": "Do not show combine all tabs for any context menu",
+        "description": "Label on checkbox for combine all"
+    },
+
+    "combineAllRightCheckBoxForDisableLabel":{
+        "message": "Do not show combine tabs to the right for any context menu",
+        "description": "Label on checkbox for combine all right"
+    },
+
+    "combineAllLeftCheckBoxForDisableLabel":{
+        "message": "Do not show combine tabs to the left for any context menu",
+        "description": "Label on checkbox for combine all left"
+    },
+
+    "clearPreviousTabsCheckBoxForDisableLabel":{
+        "message": "Do not show clear previous tabs for any context menu",
+        "description": "Label on checkbox for clear previous tabs"
+    },
+
+    "discardAllCheckBoxForTabLabel":{
+        "message": "Show discard all other tabs for tab context menu",
+        "description": "Label on checkbox to discard all"
+    },
+
+    "discardAllCheckBoxForPageLabel":{
+        "message": "Show discard all other tabs for page context menu",
+        "description": "Label on checkbox for discard all"
+    },
+
+    "discardAllCheckBoxForBrowserLabel":{
+        "message": "Show discard all other tabs for browser toolbar context menu",
+        "description": "Label on checkbox for discard all"
+    },
+
+    "discardTabCheckBoxForTabLabel":{
+        "message": "Show discard tab for tab context menu",
+        "description": "Label on checkbox for discard tab"
+    },
+
+    "discardAllMenuLabel":{
+        "message": "Discard All Other Tabs",
+        "description": "Label for submenu to discard all other tabs"
+    },
+
+    "discardRightMenuLabel":{
+        "message": "Discard Tabs To The Right",
+        "description": "Label for submenu to discard all tabs to the right"
+    },
+
+    "discardLeftMenuLabel":{
+        "message": "Discard Tabs To The Left",
+        "description": "Label for submenu to discard all tabs to the left"
+    },
+
+    "discardTabMenuLabel":{
+        "message": "Discard Tab",
+        "description": "Label for submenu to discard a tab"
+    },
+
+    "extensionName":{
+        "message": "Tab Extension",
+        "description": "Name of extension"
+    },
+
+    "extensionDescription":{
+        "message": "Adds additional options focused around tabs",
+        "description": "Description of extension"
+    },
+
+    "closedTabsNumberLabel":{
+        "message": "Number of shown closed tabs",
+        "description": "Closed tab number for options menu"
+    },
+
+    "previousMenuLabel":{
+        "message": "Previous Tabs",
+        "description": "Label for submenu for previous tabs"
+
+    },
+
+    "previousTabsLabel": {
+        "message": "Previous tabs on context menu, range is 1 - $1",
+        "description": "Options menu number input box",
+        "placeholders":{
+            "maxResults":{
+                "context": "$1",
+                "example": "25"
+            }
+        }
+    }
+}
