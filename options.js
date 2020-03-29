@@ -1,14 +1,5 @@
-/*This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+const checkClosePinnedTabs = document.querySelector("#closePinnedTabsCheckBox");
+const checkCloseTabsWhenCombine = document.querySelector("#closeTabsWhenCombineCheckBox");
 
 const checkClearPreviousForDisable = document.querySelector("#clearPreviousTabsCheckBoxForDisable");
 const checkClearPreviousForTab = document.querySelector("#clearPreviousTabsCheckBoxForTab");
@@ -70,11 +61,20 @@ const checkSavePdfForTab = document.querySelector("#savePdfCheckBoxForTab");
 const checkSavePdfForPage = document.querySelector("#savePdfCheckBoxForPage");
 const checkSavePdfForBrowser = document.querySelector("#savePdfCheckBoxForBrowser");
 
-const checkClosePinnedTabs = document.querySelector("#closePinnedTabsCheckBox");
 const checkCloseAllLeftForDisable = document.querySelector("#closeAllLeftCheckBoxForDisable");
 const checkCloseAllLeftForTab = document.querySelector("#closeAllLeftCheckBoxForTab");
 const checkCloseAllLeftForPage = document.querySelector("#closeAllLeftCheckBoxForPage");
 const checkCloseAllLeftForBrowser = document.querySelector("#closeAllLeftCheckBoxForBrowser");
+
+const checkCloseAllOtherForDisable = document.querySelector("#closeAllOtherCheckBoxForDisable");
+const checkCloseAllOtherForTab = document.querySelector("#closeAllOtherCheckBoxForTab");
+const checkCloseAllOtherForPage = document.querySelector("#closeAllOtherCheckBoxForPage");
+const checkCloseAllOtherForBrowser = document.querySelector("#closeAllOtherCheckBoxForBrowser");
+
+const checkCloseAllRightForDisable = document.querySelector("#closeAllRightCheckBoxForDisable");
+const checkCloseAllRightForTab = document.querySelector("#closeAllRightCheckBoxForTab");
+const checkCloseAllRightForPage = document.querySelector("#closeAllRightCheckBoxForPage");
+const checkCloseAllRightForBrowser = document.querySelector("#closeAllRightCheckBoxForBrowser");
 
 const checkCloseDuplicateTabsForDisable = document.querySelector("#closeDuplicateTabsCheckBoxForDisable");
 const checkCloseDuplicateTabsForTab = document.querySelector("#closeDuplicateTabsCheckBoxForTab");
@@ -131,6 +131,12 @@ async function checkBoxChanged(c){
         case "closePinnedTabsCheckBox":
             await Storage.set({
                 showClosePinnedTabs: checkClosePinnedTabs.checked,
+            });
+            break;
+
+        case "closeTabsWhenCombineCheckBox":
+            await Storage.set({
+                showCloseTabsWhenCombine: checkCloseTabsWhenCombine.checked,
             });
             break;
 
@@ -281,7 +287,7 @@ async function checkBoxChanged(c){
         case "sortTabsAccessedDesCheckBoxForDisable":
             await Storage.set({
                 showSortTabsAccessedDesForDisable: checkSortTabsAccessedDesForDisable.checked,
-                showSortTabsAccessedDesForTab: !checkSortTabsAccessedDesForDisable,
+                showSortTabsAccessedDesForTab: !checkSortTabsAccessedDesForDisable.checked,
                 showSortTabsAccessedDesForPage: !checkSortTabsAccessedDesForDisable.checked,
                 showSortTabsAccessedDesForBrowser: !checkSortTabsAccessedDesForDisable.checked
             });
@@ -317,7 +323,7 @@ async function checkBoxChanged(c){
         case "sortTabsAccessedAscCheckBoxForDisable":
             await Storage.set({
                 showSortTabsAccessedAscForDisable: checkSortTabsAccessedAscForDisable.checked,
-                showSortTabsAccessedAscForTab: !checkSortTabsAccessedAscForDisable,
+                showSortTabsAccessedAscForTab: !checkSortTabsAccessedAscForDisable.checked,
                 showSortTabsAccessedAscForPage: !checkSortTabsAccessedAscForDisable.checked,
                 showSortTabsAccessedAscForBrowser: !checkSortTabsAccessedAscForDisable.checked
             });
@@ -353,7 +359,7 @@ async function checkBoxChanged(c){
         case "sortTabsTitleDesCheckBoxForDisable":
             await Storage.set({
                 showSortTabsTitleDesForDisable: checkSortTabsTitleDesForDisable.checked,
-                showSortTabsTitleDesForTab: !checkSortTabsTitleDesForDisable,
+                showSortTabsTitleDesForTab: !checkSortTabsTitleDesForDisable.checked,
                 showSortTabsTitleDesForPage: !checkSortTabsTitleDesForDisable.checked,
                 showSortTabsTitleDesForBrowser: !checkSortTabsTitleDesForDisable.checked
             });
@@ -389,7 +395,7 @@ async function checkBoxChanged(c){
         case "sortTabsTitleAscCheckBoxForDisable":
             await Storage.set({
                 showSortTabsTitleAscForDisable: checkSortTabsTitleAscForDisable.checked,
-                showSortTabsTitleAscForTab: !checkSortTabsTitleAscForDisable,
+                showSortTabsTitleAscForTab: !checkSortTabsTitleAscForDisable.checked,
                 showSortTabsTitleAscForPage: !checkSortTabsTitleAscForDisable.checked,
                 showSortTabsTitleAscForBrowser: !checkSortTabsTitleAscForDisable.checked
             });
@@ -425,9 +431,9 @@ async function checkBoxChanged(c){
         case "sortTabsUrlDesCheckBoxForDisable":
             await Storage.set({
                 showSortTabsUrlDesForDisable: checkSortTabsUrlDesForDisable.checked,
-                showSortTabsUrlDesForTab: !checkSortTabsUrlDesForDisable,
-                showSortTabsUrlDesForPage: !checkSortTabsUrlDesForDisable,
-                showSortTabsUrlDesForBrowser: !checkSortTabsUrlDesForDisable
+                showSortTabsUrlDesForTab: !checkSortTabsUrlDesForDisable.checked,
+                showSortTabsUrlDesForPage: !checkSortTabsUrlDesForDisable.checked,
+                showSortTabsUrlDesForBrowser: !checkSortTabsUrlDesForDisable.checked
             });
             checkSortTabsUrlDesForTab.checked = !checkSortTabsUrlDesForDisable.checked;
             checkSortTabsUrlDesForPage.checked = !checkSortTabsUrlDesForDisable.checked;
@@ -578,12 +584,52 @@ async function checkBoxChanged(c){
             checkCloseAllLeftForBrowser.checked = !checkCloseAllLeftForDisable.checked;
             break;
 
+        case "closeAllOtherCheckBoxForDisable":
+            await Storage.set({
+                showCloseAllOtherForDisable: checkCloseAllOtherForDisable.checked,
+                showCloseAllOtherForTab: !checkCloseAllOtherForDisable.checked,
+                showCloseAllOtherForPage: !checkCloseAllOtherForDisable.checked,
+                showCloseAllOtherForBrowser: !checkCloseAllOtherForDisable.checked
+            });
+            checkCloseAllOtherForTab.checked = !checkCloseAllOtherForDisable.checked;
+            checkCloseAllOtherForPage.checked = !checkCloseAllOtherForDisable.checked;
+            checkCloseAllOtherForBrowser.checked = !checkCloseAllOtherForDisable.checked;
+            break;
+
+        case "closeAllRightCheckBoxForDisable":
+            await Storage.set({
+                showCloseAllRightForDisable: checkCloseAllRightForDisable.checked,
+                showCloseAllRightForTab: !checkCloseAllRightForDisable.checked,
+                showCloseAllRightForPage: !checkCloseAllRightForDisable.checked,
+                showCloseAllRightForBrowser: !checkCloseAllRightForDisable.checked
+            });
+            checkCloseAllRightForTab.checked = !checkCloseAllRightForDisable.checked;
+            checkCloseAllRightForPage.checked = !checkCloseAllRightForDisable.checked;
+            checkCloseAllRightForBrowser.checked = !checkCloseAllRightForDisable.checked;
+            break;
+
         case "closeAllLeftCheckBoxForTab":
             await Storage.set({
                 showCloseAllLeftForTab: checkCloseAllLeftForTab.checked,
                 showCloseAllLeftForDisable: false
             });
             checkCloseAllLeftForDisable.checked = false;
+            break;
+
+        case "closeAllOtherCheckBoxForTab":
+            await Storage.set({
+                showCloseAllOtherForTab: checkCloseAllOtherForTab.checked,
+                showCloseAllOtherForDisable: false
+            });
+            checkCloseAllOtherForDisable.checked = false;
+            break;
+
+        case "closeAllRightCheckBoxForTab":
+            await Storage.set({
+                showCloseAllRightForTab: checkCloseAllRightForTab.checked,
+                showCloseAllRightForDisable: false
+            });
+            checkCloseAllRightForDisable.checked = false;
             break;
 
         case "closeAllLeftCheckBoxForPage":
@@ -593,7 +639,40 @@ async function checkBoxChanged(c){
             });
             checkCloseAllLeftForDisable.checked = false;
             break;
-        
+
+        case "closeAllOtherCheckBoxForPage":
+            await Storage.set({
+                showCloseAllOtherForPage: checkCloseAllOtherForPage.checked,
+                showCloseAllOtherForDisable: false
+            });
+            checkCloseAllOtherForDisable.checked = false;
+            break;
+
+        case "closeAllRightCheckBoxForPage":
+            await Storage.set({
+                showCloseAllRightForPage: checkCloseAllRightForPage.checked,
+                showCloseAllRightForDisable: false
+            });
+            checkCloseAllRightForDisable.checked = false;
+            break;
+
+        case "closeAllRightCheckBoxForBrowser":
+            await Storage.set({
+                showCloseAllRightForBrowser: checkCloseAllRightForBrowser.checked,
+                showCloseAllRightForDisable: false
+            });
+            checkCloseAllRightForDisable.checked = false;
+            break;
+
+
+        case "closeAllOtherCheckBoxForBrowser":
+            await Storage.set({
+                showCloseAllOtherForBrowser: checkCloseAllOtherForBrowser.checked,
+                showCloseAllOtherForDisable: false
+            });
+            checkCloseAllOtherForDisable.checked = false;
+            break;
+
         case "closeAllLeftCheckBoxForBrowser":
             await Storage.set({
                 showCloseAllLeftForBrowser: checkCloseAllLeftForBrowser.checked,
@@ -949,11 +1028,25 @@ function init(){
         "contextMenuLabel",
 
         "closePinnedTabsCheckBoxLabel",
+        "closeTabsWhenCombineCheckBoxLabel",
+
+        "closeAllOtherMenuLabel",
+        "closeAllOtherCheckBoxForDisableLabel",
+        "closeAllOtherCheckBoxForTabLabel",
+        "closeAllOtherCheckBoxForPageLabel",
+        "closeAllOtherCheckBoxForBrowserLabel",
+
         "closeAllLeftMenuLabel",
         "closeAllLeftCheckBoxForDisableLabel",
         "closeAllLeftCheckBoxForTabLabel",
         "closeAllLeftCheckBoxForPageLabel",
         "closeAllLeftCheckBoxForBrowserLabel",
+
+        "closeAllRightMenuLabel",
+        "closeAllRightCheckBoxForDisableLabel",
+        "closeAllRightCheckBoxForTabLabel",
+        "closeAllRightCheckBoxForPageLabel",
+        "closeAllRightCheckBoxForBrowserLabel",
 
         "discardAllMenuLabel",
         "discardAllCheckBoxForDisableLabel",
@@ -1002,6 +1095,9 @@ function init(){
     loadOptions();
 
     numberText.addEventListener("change", numberChanged);
+
+    checkClosePinnedTabs.addEventListener("change", checkBoxChanged);
+    checkCloseTabsWhenCombine.addEventListener("change", checkBoxChanged);
 
     checkMoveAllRightForDisable.addEventListener("change", checkBoxChanged);
     checkMoveAllRightForTab.addEventListener("change", checkBoxChanged);
@@ -1058,7 +1154,6 @@ function init(){
     checkSavePdfForPage.addEventListener("change", checkBoxChanged);
     checkSavePdfForBrowser.addEventListener("change", checkBoxChanged);
 
-    checkClosePinnedTabs.addEventListener("change", checkBoxChanged);
     checkCloseDuplicateTabsForDisable.addEventListener("change", checkBoxChanged);
     checkCloseDuplicateTabsForTab.addEventListener("change", checkBoxChanged);
     checkCloseDuplicateTabsForPage.addEventListener("change", checkBoxChanged);
@@ -1069,10 +1164,20 @@ function init(){
     checkClearPreviousForPage.addEventListener("change", checkBoxChanged);
     checkClearPreviousForBrowser.addEventListener("change", checkBoxChanged);
 
+    checkCloseAllOtherForDisable.addEventListener("change", checkBoxChanged);
+    checkCloseAllOtherForTab.addEventListener("change", checkBoxChanged);
+    checkCloseAllOtherForPage.addEventListener("change", checkBoxChanged);
+    checkCloseAllOtherForBrowser.addEventListener("change", checkBoxChanged);
+
     checkCloseAllLeftForDisable.addEventListener("change", checkBoxChanged);
     checkCloseAllLeftForTab.addEventListener("change", checkBoxChanged);
     checkCloseAllLeftForPage.addEventListener("change", checkBoxChanged);
     checkCloseAllLeftForBrowser.addEventListener("change", checkBoxChanged);
+
+    checkCloseAllRightForDisable.addEventListener("change", checkBoxChanged);
+    checkCloseAllRightForTab.addEventListener("change", checkBoxChanged);
+    checkCloseAllRightForPage.addEventListener("change", checkBoxChanged);
+    checkCloseAllRightForBrowser.addEventListener("change", checkBoxChanged);
 
     checkDiscardAllLeftForDisable.addEventListener("change", checkBoxChanged);
     checkDiscardAllLeftForTab.addEventListener("change", checkBoxChanged);
@@ -1110,6 +1215,9 @@ function init(){
 function loadOptions(){
     Storage.get().then((result) => {
         numberText.value = result.previousTabsNumber;
+
+        checkClosePinnedTabs.checked = result.showClosePinnedTabs;
+        checkCloseTabsWhenCombine.checked = result.showCloseTabsWhenCombine;
 
         checkMoveAllRightForDisable.checked = result.showMoveAllRightForDisable;
         checkMoveAllRightForTab.checked = result.showMoveAllRightForTab;
@@ -1176,11 +1284,20 @@ function loadOptions(){
         checkClearPreviousForPage.checked = result.showClearPreviousTabsForPage;
         checkClearPreviousForBrowser.checked = result.showClearPreviousTabsForBrowser;
 
-        checkClosePinnedTabs.checked = result.showClosePinnedTabs;
+        checkCloseAllOtherForDisable.checked = result.showCloseAllOtherForDisable;
+        checkCloseAllOtherForTab.checked = result.showCloseAllOtherForTab;
+        checkCloseAllOtherForPage.checked = result.showCloseAllOtherForPage;
+        checkCloseAllOtherForBrowser.checked = result.showCloseAllOtherForBrowser;
+
         checkCloseAllLeftForDisable.checked = result.showCloseAllLeftForDisable;
         checkCloseAllLeftForTab.checked = result.showCloseAllLeftForTab;
         checkCloseAllLeftForPage.checked = result.showCloseAllLeftForPage;
         checkCloseAllLeftForBrowser.checked = result.showCloseAllLeftForBrowser;
+
+        checkCloseAllRightForDisable.checked = result.showCloseAllRightForDisable;
+        checkCloseAllRightForTab.checked = result.showCloseAllRightForTab;
+        checkCloseAllRightForPage.checked = result.showCloseAllRightForPage;
+        checkCloseAllRightForBrowser.checked = result.showCloseAllRightForBrowser;
 
         checkDiscardAllForDisable.checked = result.showDiscardAllForDisable;
         checkDiscardAllForTab.checked = result.showDiscardAllForTab;

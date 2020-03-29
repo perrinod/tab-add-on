@@ -6,8 +6,16 @@
     <body>
         <form>
             <h1 id="contextMenuLabel"></h1>
+            <a href="combine.html" target="_blank">Open Combined Tabs Page</a>
+            <br/><br/>
             <label for="closedTabsNumber" id="closedTabsNumberLabel"></label>
             <input type="number" id="closedTabsNumber" min="1" style="width: 6em">
+            <br/><br/>
+            <input type="checkbox" id="closePinnedTabsCheckBox">
+            <label for="closePinnedTabsCheckBox" id="closePinnedTabsCheckBoxLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeTabsWhenCombineCheckBox">
+            <label for="closeTabsWhenCombineCheckBox" id="closeTabsWhenCombineCheckBoxLabel"></label>
             <br/>
             <h2 id="clearListMenuLabel"></h2>
             <input type="checkbox" id="clearPreviousTabsCheckBoxForDisable">
@@ -152,10 +160,33 @@
             <input type="checkbox" id="closeDuplicateTabsCheckBoxForBrowser">
             <label for="closeDuplicateTabsCheckBoxForBrowser" id="closeDuplicateTabsCheckBoxForBrowserLabel"></label>
             <br/>
-            <h2 id="closeAllLeftMenuLabel"></h2>
-            <input type="checkbox" id="closePinnedTabsCheckBox">
-            <label for="closePinnedTabsCheckBox" id="closePinnedTabsCheckBoxLabel"></label>
+            <h2 id="closeAllOtherMenuLabel"></h2>
+            <input type="checkbox" id="closeAllOtherCheckBoxForDisable">
+            <label for="closeAllOtherCheckBoxForDisable" id="closeAllOtherCheckBoxForDisableLabel"></label>
             <br/>
+            <input type="checkbox" id="closeAllOtherCheckBoxForTab">
+            <label for="closeAllOtherCheckBoxForTab" id="closeAllOtherCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllOtherCheckBoxForPage">
+            <label for="closeAllOtherCheckBoxForPage" id="closeAllOtherCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllOtherCheckBoxForBrowser">
+            <label for="closeAllOtherCheckBoxForBrowser" id="closeAllOtherCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="closeAllRightMenuLabel"></h2>
+            <input type="checkbox" id="closeAllRightCheckBoxForDisable">
+            <label for="closeAllRightCheckBoxForDisable" id="closeAllRightCheckBoxForDisableLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllRightCheckBoxForTab">
+            <label for="closeAllRightCheckBoxForTab" id="closeAllRightCheckBoxForTabLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllRightCheckBoxForPage">
+            <label for="closeAllRightCheckBoxForPage" id="closeAllRightCheckBoxForPageLabel"></label>
+            <br/>
+            <input type="checkbox" id="closeAllRightCheckBoxForBrowser">
+            <label for="closeAllRightCheckBoxForBrowser" id="closeAllRightCheckBoxForBrowserLabel"></label>
+            <br/>
+            <h2 id="closeAllLeftMenuLabel"></h2>
             <input type="checkbox" id="closeAllLeftCheckBoxForDisable">
             <label for="closeAllLeftCheckBoxForDisable" id="closeAllLeftCheckBoxForDisableLabel"></label>
             <br/>

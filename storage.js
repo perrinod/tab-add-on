@@ -1,7 +1,11 @@
 const Storage = {
     _defaults: {
         "onlyCurrent": true,
-        "previousTabsNumber": browser.sessions.MAX_SESSIONS_RESULTS,
+        "previousTabsNumber": browser.sessions.MAX_SESSION_RESULTS,  
+        "showClosePinnedTabs": false,
+        "showCloseTabsWhenCombine": false,
+
+        "previousTabs": [],
 
         "showMoveAllRightForDisable": false,
         "showMoveAllRightForTab": true,
@@ -68,11 +72,20 @@ const Storage = {
         "showClearPreviousTabsForPage": false,
         "showClearPreviousTabsForBrowser": false,
 
-        "showClosePinnedTabs": false,
+        "showCloseAllOtherForDisable": false,
+        "showCloseAllOtherForTab": true,
+        "showCloseAllOtherForPage": true,
+        "showCloseAllOtherForBrowser": true,
+
         "showCloseAllLeftForDisable": false,
         "showCloseAllLeftForTab": true,
         "showCloseAllLeftForPage": true,
         "showCloseAllLeftForBrowser": true,
+
+        "showCloseAllRightForDisable": false,
+        "showCloseAllRightForTab": true,
+        "showCloseAllRightForPage": true,
+        "showCloseAllRightForBrowser": true,
 
         "showCombineAllForDisable": false,
         "showCombineAllForTab": true,

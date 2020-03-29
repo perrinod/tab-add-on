@@ -8,7 +8,11 @@
     },
 
     "browser_action":{
-        "browser_style": true
+        "default_icon":{
+        },
+        "browser_style": true,
+        "default_title": "Tab Add On",
+        "default_popup": "options.html"
     },
 
     "manifest_version": 2,
@@ -23,6 +27,7 @@
 
     "permissions": [
         "contextMenus",
+        "unlimitedStorage",
         "tabs",
         "sessions",
         "storage",

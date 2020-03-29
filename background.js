@@ -29,6 +29,24 @@ function contexts(type, prefs){
                 context.push("page");
             break;
 
+        case "CloseAllRight":
+            if(prefs.showCloseAllRightForTab)
+                context.push("tab");
+            if(prefs.showCloseAllRightForBrowser)
+                context.push("browser_action");
+            if(prefs.showCloseAllRightForPage)
+                context.push("page");
+            break;
+
+        case "CloseAllOther":
+            if(prefs.showCloseAllRightForTab)
+                context.push("tab");
+            if(prefs.showCloseAllRightForBrowser)
+                context.push("browser_action");
+            if(prefs.showCloseAllRightForPage)
+                context.push("page");
+            break;      
+
         case "MoveMenu":
             if(prefs.showMoveAllRightForTab || prefs.showMoveAllLeftForTab)
                 context.push("tab");
@@ -207,11 +225,11 @@ function contexts(type, prefs){
             break;
 
         case "CloseMenu":
-            if(prefs.showCloseAllLeftForTab || prefs.showCloseDuplicateTabsForTab)
+            if(prefs.showCloseAllOtherForTab || prefs.showCloseAllLeftForTab || prefs.showCloseDuplicateTabsForTab || prefs.showCloseAllRightForTab)
                 context.push("tab");
-            if(prefs.showCloseAllLeftForBrowser || prefs.showCloseDuplicateTabsForBrowser)
+            if(prefs.showCloseAllOtherForBrowser || prefs.showCloseAllLeftForBrowser || prefs.showCloseDuplicateTabsForBrowser || prefs.showCloseAllRightForBrowser)
                 context.push("browser_action");
-            if(prefs.showCloseAllLeftForPage || prefs.showCloseDuplicateTabsForPage)
+            if(prefs.showCloseAllOtherForPage || prefs.showCloseAllLeftForPage || prefs.showCloseDuplicateTabsForPage || prefs.showCloseAllRightForPage)
                 context.push("page");
             break;
 
@@ -296,7 +314,6 @@ async function sort(type){
     browser.tabs.move(tabIds, {index: -1});
 }
 
-
 async function restoreAll(window){
     try{
         const prefs = await Storage.get();
@@ -375,7 +392,7 @@ async function move(index, side){
         if(tabIds.length){
             await browser.windows.create(function(windowId){
                 browser.tabs.move(tabIds, {windowId: windowId.id, index: -1});
-                if(windowId.tabs.length > 1)
+                if(windowId.tabs.length >= 1)
                     browser.tabs.remove(windowId.tabs[0].id);
             });
         }
@@ -397,6 +414,45 @@ async function closeLeft(index){
             }
         }
         await browser.tabs.remove(tabsToClose);
+    } catch(e) { console.log(`${e}`); }
+}
+
+async function closeRight(index){
+    try{
+        const prefs = await Storage.get();
+        const tabs = await browser.tabs.query({currentWindow: true});
+        let tabsToClose = [];
+        for(let i = index; i < tabs.length; i++){
+            if(prefs.showClosePinnedTabs){
+                    tabsToClose.push(tabs[i].id);
+            } else{
+                if(!tabs[i].pinned)
+                    tabsToClose.push(tabs[i].id);
+            }
+        }
+        await browser.tabs.remove(tabsToClose);
+    } catch(e) { console.log(`${e}`); }
+}
+
+async function closeAllOthers(id){
+    try{
+        const prefs = await Storage.get();
+        const tabs = await browser.tabs.query({currentWindow: true});
+
+        let tabsToClose = [];
+        tabs.forEach((tab) => {
+            if(tab.id != id){
+                if(prefs.showClosePinnedTabs){
+                    tabsToClose.push(tab.id);
+                } else{
+                    if(!tabs.pinned)
+                        tabsToClose.push(tab.id);
+                }
+            }
+        });
+
+        await browser.tabs.remove(tabsToClose);
+
     } catch(e) { console.log(`${e}`); }
 }
 
@@ -450,7 +506,124 @@ async function getLastClosedTabs(maxResults , onlyCurrent){
 
         return tabs;
 
+    } catch(e){ console.log(`${e}`);}
+}
+
+async function combineAllTabs(){
+    try{
+        const prefs = await Storage.get();
+        const tabs = await browser.tabs.query({currentWindow: true});
+        let combineTabs = prefs.previousTabs;
+
+        var today = new Date();
+        let day = String(today.getDate()).padStart(2, '0');
+        let month = String(today.getMonth() + 1).padStart(2, '0');
+        var year = today.getFullYear(); 
+
+        let next = {
+            title: month + '/' + day + '/' + year,
+            url: '',
+            favIconUrl: '',
+        }
+
+        for(let i = 0; i < tabs.length; i++){
+            var tab = {
+                title: tabs[i].title,
+                url: tabs[i].url,
+                favIconUrl: tabs[i].favIconUrl
+            }
+            combineTabs.unshift(tab);
+        }
+
+        combineTabs.unshift(next);
+
+        if(combineTabs.length > 1001){
+            combineTabs.splice(1001, combineTabs.length - 1001);
+        }
+
+        await Storage.set({ 
+            previousTabs: combineTabs
+        });
+
     } catch(e){ console.log(`${e}`); }
+}
+
+async function combineAllTabsLeft(index){
+    try{
+        const prefs = await Storage.get();
+        const tabs = await browser.tabs.query({currentWindow: true});
+        let combineTabs = prefs.previousTabs;
+
+        var today = new Date();
+        let day = String(today.getDate()).padStart(2, '0');
+        let month = String(today.getMonth() + 1).padStart(2, '0');
+        var year = today.getFullYear(); 
+
+        let next = {
+            title: month + '/' + day + '/' + year,
+            url: '',
+            favIconUrl: '',
+        }
+
+        for(let i = 0; i < index; i++){
+            var tab = {
+                title: tabs[i].title,
+                url: tabs[i].url,
+                favIconUrl: tabs[i].favIconUrl
+            }
+            combineTabs.unshift(tab);
+        }
+
+        combineTabs.unshift(next);
+
+        if(combineTabs.length > 1001){
+            combineTabs.splice(1001,combineTabs.length - 1001);
+        }
+
+        await Storage.set({ 
+            previousTabs: combineTabs
+        });
+
+    } catch(e) { console.log(`${e}`); }
+}
+
+async function combineAllTabsRight(index){
+    try{
+        const prefs = await Storage.get();
+        const tabs = await browser.tabs.query({currentWindow: true});
+        let combineTabs = prefs.previousTabs;
+
+        var today = new Date();
+        let day = String(today.getDate()).padStart(2, '0');
+        let month = String(today.getMonth() + 1).padStart(2, '0');
+        var year = today.getFullYear(); 
+
+        let next = {
+            title: month + '/' + day + '/' + year,
+            url: '',
+            favIconUrl: '',
+        }
+
+        for(let i = index; i < tabs.length; i++){
+            var tab = {
+                title: tabs[i].title,
+                url: tabs[i].url,
+                favIconUrl: tabs[i].favIconUrl
+            }
+            combineTabs.unshift(tab);
+        }
+
+        combineTabs.unshift(next);
+
+        if(combineTabs.length > 1001){
+            combineTabs.splice(1001,combineTabs.length - 1001);
+        }
+
+        await Storage.set({ 
+            previousTabs: combineTabs
+        });
+
+    } catch(e) { console.log(`${e}`); }
 }
 
 async function closedTabsListChanged(){
@@ -630,6 +803,17 @@ async function closedTabsListChanged(){
             });
         }
 
+        if(!prefs.showCloseAllOtherForDisable){
+            let context = contexts("CloseAllOther", prefs);
+
+            browser.contextMenus.create({
+                contexts: context,
+                id: "CloseOther",
+                title: browser.i18n.getMessage("closeAllOtherMenuLabel"),
+                parentId: closeMenu
+            });
+        }
+
         if(!prefs.showCloseAllLeftForDisable){
             let context = contexts("CloseAllLeft", prefs);
 
@@ -637,6 +821,17 @@ async function closedTabsListChanged(){
                 contexts: context,
                 id: "CloseLeft",
                 title: browser.i18n.getMessage("closeAllLeftMenuLabel"),
+                parentId: closeMenu
+            });
+        }
+
+        if(!prefs.showCloseAllRightForDisable){
+            let context = contexts("CloseAllRight", prefs);
+
+            browser.contextMenus.create({
+                contexts: context,
+                id: "CloseRight",
+                title: browser.i18n.getMessage("closeAllRightMenuLabel"),
                 parentId: closeMenu
             });
         }
@@ -819,6 +1014,16 @@ async function contextMenuClicked(c, t){
         return;
     }
 
+    if(c.menuItemId.endsWith("CloseRight")){
+        closeRight(t.index + 1);
+        return;
+    }
+
+    if(c.menuItemId.endsWith("CloseOther")){
+        closeAllOthers(t.id);
+        return;
+    }
+
     if(c.menuItemId.endsWith("PrintPage")){
         await print();
         return;
@@ -860,6 +1065,19 @@ async function contextMenuClicked(c, t){
     }
 
     if(c.menuItemId.endsWith("CombineAll")){
+        await combineAllTabs();
+
+        browser.tabs.create({
+            url: 'combine.html'
+        });
+
+        const prefs = await Storage.get();
+
+        if(prefs.showCloseTabsWhenCombine){
+            let tabs = await browser.tabs.query({ currentWindow:true });
+            await closeLeft(tabs.length - 1);
+        }
+
         return;
     }
 
@@ -894,10 +1112,32 @@ async function contextMenuClicked(c, t){
     }
 
     if(c.menuItemId.endsWith("CombineRight")){
+        await combineAllTabsRight(t.index + 1);
+        const prefs = await Storage.get();
+
+        if(prefs.showCloseTabsWhenCombine){
+            await closeRight(t.index + 1);
+        }
+
+        browser.tabs.create({
+            url: 'combine.html'
+        });
+
         return;
     }
 
     if(c.menuItemId.endsWith("CombineLeft")){
+        await combineAllTabsLeft(t.index);
+        const prefs = await Storage.get();
+
+        if(prefs.showCloseTabsWhenCombine){
+            await closeLeft(t.index);
+        }
+
+        browser.tabs.create({
+            url: 'combine.html'
+        });
+
         return;
     }
 

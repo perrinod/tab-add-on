@@ -5,7 +5,12 @@
     },
 
     "closePinnedTabsCheckBoxLabel":{
-        "message":  "Close Pinned Tabs",
+        "message":  "Allow Pinned Tabs To Be Closed",
+        "description": "Label for checkbox"
+    },
+
+    "closeTabsWhenCombineCheckBoxLabel":{
+        "message": "Close Tabs When Combining Tabs",
         "description": "Label for checkbox"
     },
 
@@ -140,7 +145,7 @@
     },
 
     "sortTabsTitleDesMenuLabel":{
-        "message": "Sort Tabs by title (descending)",
+        "message": "Sort Tabs by Title (descending)",
         "description": "Label for submenu"
     },
 
@@ -349,6 +354,56 @@
         "description": "Label on checkbox for clearing all previous tabs"
     },
 
+    "closeAllOtherMenuLabel":{
+        "message": "Close Other Tabs",
+        "description": "Label for submenu to close other tabs"
+    },
+
+    "closeAllOtherCheckBoxForDisableLabel":{
+        "message": "Do not show close other tabs for any context menu",
+        "description": "Label for checkbox to close other tabs"
+    },
+
+    "closeAllOtherCheckBoxForPageLabel":{
+        "message": "Show close other tabs for page context menu",
+        "description": "Label for checkbox to close other tabs"
+    },
+
+    "closeAllOtherCheckBoxForBrowserLabel":{
+        "message": "Show close other tabs for browser context menu",
+        "description": "Label for checkbox to close other tabs"
+    },
+
+    "closeAllOtherCheckBoxForTabLabel":{
+        "message": "Show close other tabs for tab context menu",
+        "description": "Label for checkbox to close other tabs"
+    },
+
+    "closeAllRightMenuLabel":{
+        "message": "Close Tabs to the Right",
+        "description": "Label for submenu to close tabs to the right"
+    },
+
+    "closeAllRightCheckBoxForDisableLabel":{
+        "message": "Do not show close tabs to the right for any context menu",
+        "description": "Label for checkbox to close tabs to the right"
+    },
+
+    "closeAllRightCheckBoxForPageLabel":{
+        "message": "Show close tabs to the right for page context menu",
+        "description": "Label for checkbox to close tabs to the right"
+    },
+
+    "closeAllRightCheckBoxForBrowserLabel":{
+        "message": "Show close all tabs to the right for browser context menu",
+        "description": "Label for checkbox to close tabs to the right"
+    },
+
+    "closeAllRightCheckBoxForTabLabel":{
+        "message": "Show close tabs to the right for tab context menu",
+        "description": "Label for checkbox to close tabs to the right"
+    },
+
     "closeAllLeftMenuLabel":{
         "message": "Close Tabs to the Left",
         "description": "Label for submenu to close tabs to the left"
@@ -365,7 +420,7 @@
     },
 
     "closeAllLeftCheckBoxForBrowserLabel":{
-        "message": "Show close all tabs to the left for browsre context menu",
+        "message": "Show close all tabs to the left for browser context menu",
         "description": "Label for checkbox to close tabs to the left"
     },
 
