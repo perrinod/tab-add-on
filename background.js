@@ -537,8 +537,8 @@ async function combineAllTabs(){
 
         combineTabs.unshift(next);
 
-        if(combineTabs.length > 1001){
-            combineTabs.splice(1001, combineTabs.length - 1001);
+        if(combineTabs.length > 2000){
+            combineTabs.splice(2000, combineTabs.length - 2000);
         }
 
         await Storage.set({ 
@@ -576,8 +576,8 @@ async function combineAllTabsLeft(index){
 
         combineTabs.unshift(next);
 
-        if(combineTabs.length > 1001){
-            combineTabs.splice(1001,combineTabs.length - 1001);
+        if(combineTabs.length > 2000){
+            combineTabs.splice(2000,combineTabs.length - 2000);
         }
 
         await Storage.set({ 
@@ -615,8 +615,8 @@ async function combineAllTabsRight(index){
 
         combineTabs.unshift(next);
 
-        if(combineTabs.length > 1001){
-            combineTabs.splice(1001,combineTabs.length - 1001);
+        if(combineTabs.length > 2000){
+            combineTabs.splice(2000,combineTabs.length - 2000);
         }
 
         await Storage.set({ 

@@ -2,22 +2,26 @@
     "default_locale": "en",
 
     "description": "Extension for Tabs",
+    "homepage_url": "https://github.com/perrinod/tab-add-on",
 
     "background":{
         "scripts": ["background.js", "storage.js"]
     },
 
+    "icons":{
+        "100": "icons/pigeon-100.png"
+    },
+
     "browser_action":{
-        "default_icon":{
-        },
+        "default_icon": "icons/pigeon.svg",
         "browser_style": true,
-        "default_title": "Tab Add On",
+        "default_title": "Generic Tab Extension",
         "default_popup": "options.html"
     },
 
     "manifest_version": 2,
 
-    "name": "Tab Extension",
+    "name": "Generic Tab Extension",
 
     "options_ui":{
         "browser_style": true,
