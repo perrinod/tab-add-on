@@ -34,11 +34,6 @@
         "description": "Label for checkbox to move tabs to new window"
     },
 
-    "moveAllRightCheckBoxForBrowserLabel":{
-        "message": "Show move tabs to the right to new window for browser toolbar context menu",
-        "description": "Label for checkbox to move tabs to new window"
-    },
-
     "moveAllLeftMenuLabel":{
         "message": "Move Tabs to the Left to New Window",
         "description": "Label for submenu"
@@ -56,11 +51,6 @@
 
     "moveAllLeftCheckBoxForPageLabel":{
         "message": "Show move tabs to the left to new window for page context menu",
-        "description": "Label for submenu"
-    },
-
-    "moveAllLeftCheckBoxForBrowserLabel":{
-        "message": "Show move tabs to the left to new window for browser toolbar context menu",
         "description": "Label for submenu"
     },
     
@@ -99,11 +89,6 @@
         "description": "Label for checkbox to print page"
     },
 
-    "printPageCheckBoxForBrowserLabel":{
-        "message": "Show print page for browser context menu",
-        "description": "Label for checkbox to print page"
-    },
-
     "printPreviewMenuLabel":{
         "message": "Print Preview",
         "description": "Label for submenu"
@@ -121,11 +106,6 @@
 
     "printPreviewCheckBoxForPageLabel":{
         "message": "Show print preview for page context menu",
-        "description": "Label for checkbox to print preview"
-    },
-
-    "printPreviewCheckBoxForBrowserLabel":{
-        "message": "Show print preview for browser toolbar context menu",
         "description": "Label for checkbox to print preview"
     },
 
@@ -194,16 +174,6 @@
         "description": "Label for checkbox to sort tabs by url"
     },
 
-    "sortTabsUrlAscCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by url (ascending) in browser toolbar context menu",
-        "description": "Label for checkbox to sort tabs by url"
-    },
-
-    "sortTabsUrlDesCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by url (descending) in browser toolbar context menu",
-        "description": "Label for checkbox to sort tabs by url"
-    },
-
     "sortTabsTitleAscCheckBoxForDisableLabel":{
         "message": "Do not show sort tabs by title (ascending) in any context menu",
         "description": "Label for checkbox to sort tabs by title"
@@ -231,16 +201,6 @@
 
     "sortTabsTitleDesCheckBoxForPageLabel":{
         "message": "Show sort tabs by title (descending) in page context menu",
-        "description": "Label for checkbox to sort tabs by title"
-    },
-
-    "sortTabsTitleAscCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by title (ascending) in browser toolbar context menu",
-        "description": "Label for checkbox to sort tabs by title"
-    },
-
-    "sortTabsTitleDesCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by title (descending) in browser toolbar context menu",
         "description": "Label for checkbox to sort tabs by title"
     },
 
@@ -274,16 +234,6 @@
         "description": "Label for checkbox to sort tabs by last accessed"
     },
 
-    "sortTabsAccessedAscCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by last accessed (ascending) in browser toolbar context menu",
-        "description": "Label for checkbox to sort tabs by last accessed"
-    },
-
-    "sortTabsAccessedDesCheckBoxForBrowserLabel":{
-        "message": "Show sort tabs by last accessed (descending) in browser toolbar context menu",
-        "description": "Label for checkbox to sort tabs by last accessed"
-    },
-
     "savePdfMenuLabel":{
         "message": "Save as PDF",
         "description": "Label for submenu"
@@ -291,11 +241,6 @@
 
     "savePdfCheckBoxForDisableLabel":{
         "message": "Do not show save as PDF for any context menu",
-        "description": "Label for checkbox to save as pdf"
-    },
-
-    "savePdfCheckBoxForBrowserLabel":{
-        "message": "Show save as PDF for browser toolbar context menu",
         "description": "Label for checkbox to save as pdf"
     },
 
@@ -324,11 +269,6 @@
         "description": "Label on checkbox for close duplicate tabs"
     },
     
-    "closeDuplicateTabsCheckBoxForBrowserLabel":{
-        "message": "Show close duplicate tabs for browser toolbar context menu",
-        "description": "Label on checkbox for close duplicate tabs"
-    },
-
     "closeDuplicateTabsCheckBoxForTabLabel":{
         "message": "Show close duplicate tabs for tab context menu",
         "description": "Label on checkbox for close duplicate tabs"
@@ -337,11 +277,6 @@
     "closeDuplicateTabsCheckBoxForPageLabel":{
         "message": "Show close duplicate tabs for page context menu",
         "description": "Label on checkbox for close duplicate tabs"
-    },
-
-    "clearPreviousTabsCheckBoxForBrowserLabel":{
-        "message": "Show clear previous tabs for browser toolbar context menu",
-        "description": "Label on checkbox for clearing all previous tabs"
     },
 
     "clearPreviousTabsCheckBoxForTabLabel":{
@@ -369,11 +304,6 @@
         "description": "Label for checkbox to close other tabs"
     },
 
-    "closeAllOtherCheckBoxForBrowserLabel":{
-        "message": "Show close other tabs for browser context menu",
-        "description": "Label for checkbox to close other tabs"
-    },
-
     "closeAllOtherCheckBoxForTabLabel":{
         "message": "Show close other tabs for tab context menu",
         "description": "Label for checkbox to close other tabs"
@@ -391,11 +321,6 @@
 
     "closeAllRightCheckBoxForPageLabel":{
         "message": "Show close tabs to the right for page context menu",
-        "description": "Label for checkbox to close tabs to the right"
-    },
-
-    "closeAllRightCheckBoxForBrowserLabel":{
-        "message": "Show close all tabs to the right for browser context menu",
         "description": "Label for checkbox to close tabs to the right"
     },
 
@@ -419,11 +344,6 @@
         "description": "Label for checkbox to close tabs to the left"
     },
 
-    "closeAllLeftCheckBoxForBrowserLabel":{
-        "message": "Show close all tabs to the left for browser context menu",
-        "description": "Label for checkbox to close tabs to the left"
-    },
-
     "closeAllLeftCheckBoxForTabLabel":{
         "message": "Show close tabs to the left for tab context menu",
         "description": "Label for checkbox to close tabs to the left"
@@ -444,11 +364,6 @@
         "description": "Label for checkbox for combine all"
     },
 
-    "combineAllCheckBoxForBrowserLabel":{
-        "message": "Show combine all tabs for browser toolbar context menu",
-        "description": "Label for checkbox for combine all"
-    },
-
     "combineAllRightCheckBoxForTabLabel":{
         "message": "Show combine tabs to the right for tab context menu",
         "description": "Label for checkbox for combine all right"
@@ -459,11 +374,6 @@
         "description": "Label for checkbox for combine all right"
     },
 
-    "combineAllRightCheckBoxForBrowserLabel":{
-        "message": "Show combine tabs to the right for browser context menu",
-        "description": "Label for checkbox for combine all right"
-    },
-
     "combineAllLeftCheckBoxForTabLabel":{
         "message": "Show combine tabs to the left for tab context menu",
         "description": "Label for checkbox for combine all left"
@@ -471,11 +381,6 @@
 
     "combineAllLeftCheckBoxForPageLabel":{
         "message": "Show combine tabs to the left for page context menu",
-        "description": "Label for checkbox for combine all left"
-    },
-
-    "combineAllLeftCheckBoxForBrowserLabel":{
-        "message": "Show combine tabs to the left for browser context menu",
         "description": "Label for checkbox for combine all left"
     },
     
@@ -530,16 +435,6 @@
         "description": "Label for checkbox to discard all right"
     },
 
-    "discardAllLeftCheckBoxForBrowserLabel":{
-        "message": "Show discard tabs to the left for browser toolbar context menu",
-        "description": "Label for checkbox to discard all left"
-    },
-
-    "discardAllRightCheckBoxForBrowserLabel":{
-        "message": "Show discard tabs to the right for browser toolbar context menu",
-        "description": "Label for checkbox to discard all right"
-    },
-
     "discardAllCheckBoxForDisableLabel":{
         "message": "Do not show discard all other tabs for any context menu",
         "description": "Label on checkbox to discard all"
@@ -582,11 +477,6 @@
 
     "discardAllCheckBoxForPageLabel":{
         "message": "Show discard all other tabs for page context menu",
-        "description": "Label on checkbox for discard all"
-    },
-
-    "discardAllCheckBoxForBrowserLabel":{
-        "message": "Show discard all other tabs for browser toolbar context menu",
         "description": "Label on checkbox for discard all"
     },
 

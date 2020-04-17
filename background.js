@@ -23,8 +23,6 @@ function contexts(type, prefs){
         case "CloseAllLeft":
             if(prefs.showCloseAllLeftForTab)
                 context.push("tab");
-            if(prefs.showCloseAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showCloseAllLeftForPage)
                 context.push("page");
             break;
@@ -32,8 +30,6 @@ function contexts(type, prefs){
         case "CloseAllRight":
             if(prefs.showCloseAllRightForTab)
                 context.push("tab");
-            if(prefs.showCloseAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showCloseAllRightForPage)
                 context.push("page");
             break;
@@ -41,8 +37,6 @@ function contexts(type, prefs){
         case "CloseAllOther":
             if(prefs.showCloseAllRightForTab)
                 context.push("tab");
-            if(prefs.showCloseAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showCloseAllRightForPage)
                 context.push("page");
             break;      
@@ -50,8 +44,6 @@ function contexts(type, prefs){
         case "MoveMenu":
             if(prefs.showMoveAllRightForTab || prefs.showMoveAllLeftForTab)
                 context.push("tab");
-            if(prefs.showMoveAllRightForBrowser || prefs.showMoveAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showMoveAllRightForPage || prefs.showMoveAllLeftForPage)
                 context.push("page");
             break;
@@ -59,8 +51,6 @@ function contexts(type, prefs){
         case "MoveAllRight":
             if(prefs.showMoveAllRightForTab)
                 context.push("tab");
-            if(prefs.showMoveAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showMoveAllRightForPage)
                 context.push("page");
             break;
@@ -68,8 +58,6 @@ function contexts(type, prefs){
         case "MoveAllLeft":
             if(prefs.showMoveAllLeftForTab)
                 context.push("tab");
-            if(prefs.showMoveAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showMoveAllLeftForPage)
                 context.push("page");
             break;
@@ -77,8 +65,6 @@ function contexts(type, prefs){
         case "PrintMenu":
             if(prefs.showPrintPageForTab || prefs.showPrintPreviewForTab)
                 context.push("tab");
-            if(prefs.showPrintPageForBrowser || prefs.showPrintPreviewForBrowser)
-                context.push("browser_action");
             if(prefs.showPrintPageForPage || prefs.showPrintPageForPage)
                 context.push("page");
             break;
@@ -86,8 +72,6 @@ function contexts(type, prefs){
         case "PrintPage":
             if(prefs.showPrintPageForTab)
                 context.push("tab");
-            if(prefs.showPrintPageForBrowser)
-                context.push("browser_action");
             if(prefs.showPrintPageForPage)
                 context.push("page");
             break;
@@ -95,8 +79,6 @@ function contexts(type, prefs){
         case "PrintPreview":
             if(prefs.showPrintPreviewForTab)
                 context.push("tab");
-            if(prefs.showPrintPreviewForBrowser)
-                context.push("browser_action");
             if(prefs.showPrintPreviewForPage)
                 context.push("page");
             break;
@@ -106,10 +88,6 @@ function contexts(type, prefs){
                 prefs.showSortTabsTitleAscForTab || prefs.showSortTabsTitleDesForTab ||
                 prefs.showSortTabsAccessedAscForTab || prefs.showSortTabsAccessedDesForTab)
                 context.push("tab");
-            if(prefs.showSortTabsUrlAscForBrowser || prefs.showSortTabsUrlDesForBrowser || 
-                prefs.showSortTabsTitleAscForBrowser || prefs.showSortTabsTitleDesForBrowser ||
-                prefs.showSortTabsAccessedAscForBrowser || prefs.showSortTabsAccessedDesForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsUrlAscForPage || prefs.showSortTabsUrlDesForPage || 
                 prefs.showSortTabsTitleAscForPage || prefs.showSortTabsTitleDesForPage ||
                 prefs.showSortTabsAccessedAscForPage || prefs.showSortTabsAccessedDesForPage)
@@ -119,8 +97,6 @@ function contexts(type, prefs){
         case "SortAccessedDes":
             if(prefs.showSortTabsAccessedDesForTab)
                 context.push("tab");
-            if(prefs.showSortTabsAccessedDesForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsAccessedDesForPage)
                 context.push("page");
             break;
@@ -128,8 +104,6 @@ function contexts(type, prefs){
         case "SortAccessedAsc":
             if(prefs.showSortTabsAccessedAscForTab)
                 context.push("tab");
-            if(prefs.showSortTabsAccessedAscForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsAccessedAscForPage)
                 context.push("page");
             break;
@@ -137,8 +111,6 @@ function contexts(type, prefs){
         case "SortTitleDes":
             if(prefs.showSortTabsTitleDesForTab)
                 context.push("tab");
-            if(prefs.showSortTabsTitleDesForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsTitleDesForPage)
                 context.push("page");
             break;
@@ -146,8 +118,6 @@ function contexts(type, prefs){
         case "SortTitleAsc":
             if(prefs.showSortTabsTitleAscForTab)
                 context.push("tab");
-            if(prefs.showSortTabsTitleAscForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsTitleAscForPage)
                 context.push("page");
             break;
@@ -155,8 +125,6 @@ function contexts(type, prefs){
         case "SortUrlDes":
             if(prefs.showSortTabsUrlDesForTab)
                 context.push("tab");
-            if(prefs.showSortTabsUrlDesForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsUrlDesForPage)
                 context.push("page");
             break;
@@ -164,8 +132,6 @@ function contexts(type, prefs){
         case "SortUrlAsc":
             if(prefs.showSortTabsUrlAscForTab)
                 context.push("tab");
-            if(prefs.showSortTabsUrlAscForBrowser)
-                context.push("browser_action");
             if(prefs.showSortTabsUrlAscForPage)
                 context.push("page");
             break;
@@ -173,8 +139,6 @@ function contexts(type, prefs){
         case "SavePdf":
             if(prefs.showSavePdfForTab)
                 context.push("tab");
-            if(prefs.showSavePdfForBrowser)
-                context.push("browser_action");
             if(prefs.showSavePdfForPage)
                 context.push("page");
             break;
@@ -182,8 +146,6 @@ function contexts(type, prefs){
         case "ClearAll":
             if(prefs.showClearPreviousTabsForTab)
                 context.push("tab");
-            if(prefs.showClearPreviousTabsForBrowser)
-                context.push("browser_action");
             if(prefs.showClearPreviousTabsForPage)
                 context.push("page");
             break;
@@ -191,8 +153,6 @@ function contexts(type, prefs){
         case "CombineAll":
             if(prefs.showCombineAllForTab)
                 context.push("tab");
-            if(prefs.showCombineAllForBrowser)
-                context.push("browser_action");
             if(prefs.showCombineAllForPage)
                 context.push("page");
             break;
@@ -200,8 +160,6 @@ function contexts(type, prefs){
         case "CombineAllRight":
             if(prefs.showCombineAllRightForTab)
                 context.push("tab");
-            if(prefs.showCombineAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showCombineAllRightForPage)
                 context.push("page");
             break;
@@ -209,8 +167,6 @@ function contexts(type, prefs){
         case "CombineAllLeft":
             if(prefs.showCombineAllLeftForTab)
                 context.push("tab");
-            if(prefs.showCombineAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showCombineAllLeftForPage)
                 context.push("page");
             break;
@@ -218,8 +174,6 @@ function contexts(type, prefs){
         case "CloseDuplicate":
             if(prefs.showCloseDuplicateTabsForTab)
                 context.push("tab");
-            if(prefs.showCloseDuplicateTabsForBrowser)
-                context.push("browser_action");
             if(prefs.showCloseDuplicateTabsForPage)
                 context.push("page");
             break;
@@ -227,8 +181,6 @@ function contexts(type, prefs){
         case "CloseMenu":
             if(prefs.showCloseAllOtherForTab || prefs.showCloseAllLeftForTab || prefs.showCloseDuplicateTabsForTab || prefs.showCloseAllRightForTab)
                 context.push("tab");
-            if(prefs.showCloseAllOtherForBrowser || prefs.showCloseAllLeftForBrowser || prefs.showCloseDuplicateTabsForBrowser || prefs.showCloseAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showCloseAllOtherForPage || prefs.showCloseAllLeftForPage || prefs.showCloseDuplicateTabsForPage || prefs.showCloseAllRightForPage)
                 context.push("page");
             break;
@@ -236,8 +188,6 @@ function contexts(type, prefs){
         case "CombineMenu":
             if(prefs.showCombineAllForTab || prefs.showCombineAllRightForTab || prefs.showCombineAllLeftForTab)
                 context.push("tab");
-            if(prefs.showCombineAllForBrowser || prefs.showCombineAllRightForBrowser || prefs.showCombineAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showCombineAllForPage || prefs.showCombineAllRightForBrowser || prefs.showCombineAllLeftForBrowser)
                 context.push("page");
             break;
@@ -245,8 +195,6 @@ function contexts(type, prefs){
         case "DiscardMenu":
             if(prefs.showDiscardAllForTab || prefs.showDiscardAllRightForTab || prefs.showDiscardAllLeftForTab || prefs.showDiscardTabForTab)
                 context.push("tab");
-            if(prefs.showDiscardAllForBrowser || prefs.showDiscardAllRightForBrowser || prefs.showDiscardAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showDiscardAllForPage || prefs.showDiscardAllRightForPage || prefs.showDiscardAllLeftForPage)
                 context.push("page");
             break;
@@ -254,8 +202,6 @@ function contexts(type, prefs){
         case "DiscardAll":
             if(prefs.showDiscardAllForTab)
                 context.push("tab");
-            if(prefs.showDiscardAllForBrowser)
-                context.push("browser_action");
             if(prefs.showDiscardAllForPage)
                 context.push("page");
             break;
@@ -263,8 +209,6 @@ function contexts(type, prefs){
         case "DiscardAllRight":
             if(prefs.showDiscardAllRightForTab)
                 context.push("tab");
-            if(prefs.showDiscardAllRightForBrowser)
-                context.push("browser_action");
             if(prefs.showDiscardAllRightForPage)
                 context.push("page");
             break;
@@ -272,8 +216,6 @@ function contexts(type, prefs){
         case "DiscardAllLeft":
             if(prefs.showDiscardAllLeftForTab)
                 context.push("tab");
-            if(prefs.showDiscardAllLeftForBrowser)
-                context.push("browser_action");
             if(prefs.showDiscardAllLeftForPage)
                 context.push("page");
             break;
@@ -302,11 +244,11 @@ async function sort(type){
             break;
 
         case "SortAccessedAsc":
-            tabs.sort(function(a, b){return a.lastAccessed > b.lastAccessed});
+            tabs.sort(function(a, b){return a.lastAccessed < b.lastAccessed});
             break;
 
         case "SortAccessedDes":
-            tabs.sort(function(a, b){return a.lastAccessed < b.lastAccessed});
+            tabs.sort(function(a, b){return a.lastAccessed > b.lastAccessed});
             break;
     }
 
@@ -318,6 +260,7 @@ async function restoreAll(window){
     try{
         const prefs = await Storage.get();
         const tabs = await getLastClosedTabs(prefs.previousTabsNumber, prefs.onlyCurrent);
+
         if(!window){
             tabs.forEach((tab) => {
                 if(typeof tab !== 'undefined' && typeof tab.url !== 'undefined'){
@@ -358,12 +301,17 @@ async function print(){
 
 async function closeDuplicateTabs(id, pageUrl){
     try{
+        const prefs = await Storage.get();
         const tabs = await browser.tabs.query({currentWindow: true, url: pageUrl});
         let tabsToClose = [];
         if(tabs.length >= 1){
             for(let i = 0; i < tabs.length; i++){
-                if(id != tabs[i].id)
+                if(prefs.showClosePinnedTabs && id != tabs[i].id){
                     tabsToClose.push(tabs[i].id);
+                } else{
+                    if(!tabs[i].pinned && id != tabs[i].id)
+                        tabsToClose.push(tabs[i].id);
+                }
             }
             browser.tabs.remove(tabsToClose);
         }
@@ -637,7 +585,7 @@ async function closedTabsListChanged(){
         let moveMenu = browser.contextMenus.create({
             contexts: context,
             id: "MoveMenu",
-            title: browser.i18n.getMessage("moveMenuLabel")
+            title: browser.i18n.getMessage("moveMenuLabel"),
         });
 
         if(!prefs.showMoveAllRightForDisable){
@@ -702,7 +650,7 @@ async function closedTabsListChanged(){
         let sortTabsMenu = browser.contextMenus.create({
             contexts: context,
             id: "SortTabs",
-            title: browser.i18n.getMessage("sortTabsMenuLabel")
+            title: browser.i18n.getMessage("sortTabsMenuLabel"),
         });
 
         if(!prefs.showSortTabsUrlAscForDisable){
@@ -778,7 +726,7 @@ async function closedTabsListChanged(){
         browser.contextMenus.create({
             contexts: context,
             id: "SavePdf",
-            title: browser.i18n.getMessage("savePdfMenuLabel")
+            title: browser.i18n.getMessage("savePdfMenuLabel"),
         });
     }
 
@@ -789,7 +737,7 @@ async function closedTabsListChanged(){
         let closeMenu = browser.contextMenus.create({
             contexts: context,
             id: "CloseMenu",
-            title: browser.i18n.getMessage("closeMenuLabel")
+            title: browser.i18n.getMessage("closeMenuLabel"),
         });
 
         if(!prefs.showCloseDuplicateTabsForDisable){
@@ -844,7 +792,7 @@ async function closedTabsListChanged(){
         let discardMenu = browser.contextMenus.create({
             contexts: context,
             id: "DiscardMenu",
-            title: browser.i18n.getMessage("discardMenu")
+            title: browser.i18n.getMessage("discardMenu"),
         });
 
         if(prefs.showDiscardTabForTab){
@@ -911,7 +859,7 @@ async function closedTabsListChanged(){
         let combineMenu = browser.contextMenus.create({
             contexts: context,
             id: "CombineMenu",
-            title: browser.i18n.getMessage("combineMenuLabel")
+            title: browser.i18n.getMessage("combineMenuLabel"),
         });
 
         if(!prefs.showCombineAllForDisable){
@@ -952,22 +900,22 @@ async function closedTabsListChanged(){
         }
     }
 
-    if(tabs.length){
+    if(tabs !== undefined && tabs.length){
         let previousMenu = browser.contextMenus.create({
-            contexts: ["browser_action", "page", "tab"],
+            contexts: ["page", "tab"],
             id: "PreviousMenu",
-            title: browser.i18n.getMessage("previousMenuLabel")
+            title: browser.i18n.getMessage("previousMenuLabel"),
         });
 
         browser.contextMenus.create({
-            contexts: ["browser_action", "page", "tab"],
+            contexts: ["page", "tab"],
             id: "RestoreAll",
             title: browser.i18n.getMessage("restoreAllTabsLabel"),
             parentId: previousMenu
         });
 
         browser.contextMenus.create({
-            contexts: ["browser_action", "page", "tab"],
+            contexts: ["page", "tab"],
             id: "RestoreAllWindow",
             title: browser.i18n.getMessage("restoreAllTabsWindowLabel"),
             parentId: previousMenu
@@ -976,7 +924,7 @@ async function closedTabsListChanged(){
         tabs.forEach((tab) => {
             if(typeof tab !== 'undefined'){
                 browser.contextMenus.create({
-                    contexts: ["browser_action", "page", "tab"],
+                    contexts: ["page", "tab"],
                     icons: {18: tab.favIconUrl || ""},
                     id: tab.sessionId,
                     title: tab.title,
@@ -1119,9 +1067,20 @@ async function contextMenuClicked(c, t){
             await closeRight(t.index + 1);
         }
 
-        browser.tabs.create({
-            url: 'combine.html'
-        });
+        var matchPatterns = ['moz-extension://*/*combine.html', 'moz-extension://*/combine.html?*'];
+
+        const tabs = await browser.tabs.query({ url: matchPatterns });
+
+        if(tabs.length){
+            for(var i = 0; i < tabs.length; i++){
+                browser.tabs.reload(tabs[i].id);
+            }
+        } else{
+            browser.tabs.create({
+                url: 'combine.html'
+            });
+        }
+
 
         return;
     }
@@ -1134,9 +1093,19 @@ async function contextMenuClicked(c, t){
             await closeLeft(t.index);
         }
 
-        browser.tabs.create({
-            url: 'combine.html'
-        });
+        var matchPatterns = ['moz-extension://*/*combine.html', 'moz-extension://*/combine.html?*'];
+
+        const tabs = await browser.tabs.query({ url: matchPatterns });
+
+        if(tabs.length){
+            for(var i = 0; i < tabs.length; i++){
+                browser.tabs.reload(tabs[i].id);
+            }
+        } else{
+            browser.tabs.create({
+                url: 'combine.html'
+            });
+        }
 
         return;
     }
