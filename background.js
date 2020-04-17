@@ -264,14 +264,14 @@ async function restoreAll(window){
         if(!window){
             tabs.forEach((tab) => {
                 if(typeof tab !== 'undefined' && typeof tab.url !== 'undefined'){
-                    browser.tabs.create({ url: tab.url });
+                    browser.sessions.restore(tab.sessionId);
                 }
             });
         } else {
             await browser.windows.create(function(windowId){
                 tabs.forEach((tab) => {
                     if(typeof tab !== 'undefined' && typeof tab.url !== 'undefined'){
-                        browser.tabs.create({ windowId: windowId.id, url: tab.url});
+                        browser.tabs.create({ windowId: windowId.id, url: tab.url });
                     }
                 });
 
@@ -841,17 +841,6 @@ async function closedTabsListChanged(){
         }
     }
 
-    if(!prefs.showClearPreviousTabsForDisable){
-
-        let context = contexts("ClearAll", prefs);
-
-        browser.contextMenus.create({
-            contexts: context,
-            id: "ClearAll",
-            title: browser.i18n.getMessage("clearListMenuLabel"),
-        });
-    }
-
     context = contexts("CombineMenu", prefs);
 
     if(context.length){
@@ -907,6 +896,18 @@ async function closedTabsListChanged(){
             title: browser.i18n.getMessage("previousMenuLabel"),
         });
 
+        tabs.forEach((tab) => {
+            if(typeof tab !== 'undefined'){
+                browser.contextMenus.create({
+                    contexts: ["page", "tab"],
+                    icons: {18: tab.favIconUrl || ""},
+                    id: tab.sessionId,
+                    title: tab.title,
+                    parentId: previousMenu
+                });
+            }
+        });
+
         browser.contextMenus.create({
             contexts: ["page", "tab"],
             id: "RestoreAll",
@@ -921,22 +922,23 @@ async function closedTabsListChanged(){
             parentId: previousMenu
         });
 
-        tabs.forEach((tab) => {
-            if(typeof tab !== 'undefined'){
-                browser.contextMenus.create({
-                    contexts: ["page", "tab"],
-                    icons: {18: tab.favIconUrl || ""},
-                    id: tab.sessionId,
-                    title: tab.title,
-                    parentId: previousMenu
-                });
-            }
-        });
+        if(!prefs.showClearPreviousTabsForDisable){
+
+            let context = contexts("ClearAll", prefs);
+    
+            browser.contextMenus.create({
+                contexts: context,
+                id: "ClearAll",
+                title: browser.i18n.getMessage("clearListMenuLabel"),
+                parentId: previousMenu
+            });
+        }
 
     }
 }
 
 async function contextMenuClicked(c, t){
+
     if(c.menuItemId.endsWith("RestoreAllWindow")){
         await restoreAll(true);
         return;
@@ -1120,8 +1122,10 @@ async function contextMenuClicked(c, t){
     const currentWindow = await browser.windows.getCurrent();
     if (session.tab.windowId != currentWindow.id)
       browser.windows.update(session.tab.windowId, {focused: true});
+
 }
 
 browser.sessions.onChanged.addListener(closedTabsListChanged);
+browser.windows.onFocusChanged.addListener(closedTabsListChanged);
 closedTabsListChanged();
 browser.contextMenus.onClicked.addListener(contextMenuClicked);
